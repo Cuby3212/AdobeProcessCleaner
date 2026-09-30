@@ -21,7 +21,7 @@ Las aplicaciones de Adobe Creative Cloud suelen dejar numerosos procesos en segu
 
 ## **Aviso de Windows SmartScreen**
 
-Debido a que esta herramienta es de código abierto y no está firmada con un Certificado de Firma de Código de pago, Windows Defender SmartScreen puede mostrar una advertencia al ejecutarla (`Editor Desconocido`).
+Debido a que esta herramienta es de código abierto y no está firmada con un certificado de firma de código de pago, Windows Defender SmartScreen puede mostrar una advertencia al ejecutarla (`Editor Desconocido`).
 
 Para ejecutar la aplicación:
 
