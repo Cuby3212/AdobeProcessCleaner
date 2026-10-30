@@ -10,80 +10,48 @@
 
 ## 🇪🇸 Español
 
-Una utilidad ligera diseñada para cerrar procesos persistentes de Adobe en segundo plano y liberar recursos del sistema en Windows.
+Utilidad ligera para cerrar procesos en segundo plano de Adobe en Windows y liberar recursos del sistema.
 
-### **Descripción general**
+### Características principales
 
-Las aplicaciones de Adobe Creative Cloud suelen dejar numerosos procesos en segundo plano, servicios y asistentes de sincronización en ejecución incluso después de cerrar el software principal. Adobe Process Cleaner (APC) automatiza la identificación y el cierre de estas tareas en segundo plano, asegurando que tu CPU y memoria no se vean sobrecargadas de procesos basura cuando no estés usando la suite Adobe.
+* Identifica y detiene todos los procesos y servicios de Adobe (incluida la sincronización en la nube).
+* Se ejecuta inmediatamente sin instalación ni configuración.
 
-### **Características principales**
+### Uso
 
-* **Cierre completo de procesos:** Identifica y detiene todos los procesos activos relacionados con Adobe, incluidos los servicios de actualización y las tareas en segundo plano de sincronización en la nube.
-* **Cero configuración:** Se ejecuta inmediatamente sin pasos de configuración complejos ni dependencias externas.
+1. Descarga el ejecutable desde [Releases](https://github.com/Cuby3212/AdobeProcessCleaner/releases/latest).
+2. Cierra las aplicaciones de Adobe (Photoshop, Premiere, etc.).
+3. Ejecuta `AdobeProcessCleaner.exe` y sigue las indicaciones.
 
-### **Cómo usarlo**
+### Aviso de SmartScreen
 
-1. Descarga el ejecutable más reciente desde la sección de [Releases](https://github.com/Cuby3212/AdobeProcessCleaner/releases/latest) a la derecha.
-2. Cierra todas las aplicaciones abiertas de Adobe Creative Cloud (por ejemplo, Photoshop, Premiere Pro, Illustrator).
-3. Ejecuta `AdobeProcessCleaner.exe`.
-4. Espera a que el proceso termine, y sigue las indicaciones de la terminal para completar la limpieza.
+Windows puede mostrar una advertencia de "Editor desconocido" al ser un ejecutable sin firmar. El programa es de código abierto y seguro; para continuar haz clic en **Más información** > **Ejecutar de todas formas**.
 
-### **Aviso de Windows SmartScreen**
+### Licencia y autoría
 
-Es posible que Windows Defender SmartScreen muestre una advertencia al ejecutar la aplicación. Sin embargo, en caso de que aparezca un aviso de `Editor Desconocido`, la ejecución es completamente segura.
-
-Esta herramienta carece de una costosa firma digital comercial, pero todo el proyecto es transparente: puedes revisar el código fuente directamente en este repositorio para comprobar por ti mismo que el programa es 100% seguro antes de usarlo.
-
-Para proceder en caso de advertencia:
-
-1. Haz clic en **Más información** en el aviso de SmartScreen.
-2. Selecciona **Ejecutar de todas formas**.
-
-### **Autor**
-
-Creado y mantenido por Cuby3212.
-
-### **Licencia**
-
-Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE.md](LICENSE.md) para más detalles.
+Creado por Cuby3212 bajo la [licencia MIT](LICENSE.md).
 
 ---
 
 ## 🇬🇧 English
 
-A lightweight utility designed to close persistent background Adobe processes and free up system resources on Windows.
+Lightweight utility to close background Adobe processes and free up system resources on Windows.
 
-### **Overview**
+### Key features
 
-Adobe Creative Cloud applications often leave numerous background processes, services, and sync assistants running even after closing the main software. Adobe Process Cleaner (APC) automates identifying and shutting down these background tasks, ensuring your CPU and memory aren't bogged down with unnecessary clutter when you aren't actively using the Adobe suite.
+* Identifies and stops all Adobe processes and services (including cloud sync).
+* Runs immediately with no installation or setup required.
 
-### **Key Features**
+### Usage
 
-* **Complete process termination:** Identifies and stops all active Adobe-related processes, including update services and cloud sync background tasks.
-* **Zero configuration:** Runs immediately with no complex setup steps or external dependencies.
+1. Download the executable from [Releases](https://github.com/Cuby3212/AdobeProcessCleaner/releases/latest).
+2. Close Adobe applications (Photoshop, Premiere, etc.).
+3. Run `AdobeProcessCleaner.exe` and follow the prompts.
 
-### **How to Use**
+### SmartScreen notice
 
-1. Download the latest executable from the [Releases](https://github.com/Cuby3212/AdobeProcessCleaner/releases/latest) section on the right.
-2. Close any open Adobe Creative Cloud apps (e.g., Photoshop, Premiere Pro, Illustrator).
-3. Run `AdobeProcessCleaner.exe`.
-4. Wait for the process to finish, and follow the terminal prompts to complete the cleanup.
+Windows may show an "Unknown Publisher" warning because the executable is unsigned. The tool is open-source and safe; to proceed, click **More info** > **Run anyway**.
 
-### **Windows SmartScreen Notice**
+### License and author
 
-Windows Defender SmartScreen might display a warning when launching the application. However, if an `Unknown Publisher` notice pops up, running the tool is completely safe.
-
-This tool lacks an expensive commercial digital signature, but the entire project is transparent: you can inspect the source code directly in this repository to verify the program's safety before running it.
-
-To proceed if the warning appears:
-
-1. Click on **More info** in the SmartScreen prompt.
-2. Select **Run anyway**.
-
-### **Author**
-
-Created and maintained by Cuby3212.
-
-### **License**
-
-This project is licensed under the MIT License. Check the [LICENSE.md](LICENSE.md) file for more details.
+Created by Cuby3212 under the [MIT license](LICENSE.md).
