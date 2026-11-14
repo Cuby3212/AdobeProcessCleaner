@@ -8,52 +8,71 @@
 
 ## Español
 
-Utilidad portátil para cerrar procesos auxiliares de Adobe en Windows.
+Adobe Process Cleaner sirve para cerrar los procesos de Adobe que siguen en segundo plano después de cerrar sus aplicaciones. Es portátil: basta con abrir el ejecutable.
 
 ### Uso
 
 1. Descarga `AdobeProcessCleaner.exe` desde [Releases](https://github.com/Cuby3212/AdobeProcessCleaner/releases/latest).
-2. Guarda tu trabajo, cierra las aplicaciones de Adobe y espera a que terminen las instalaciones y la sincronización.
-3. Ejecuta el programa. Mostrará los cierres confirmados y los errores.
+2. Guarda tu trabajo y cierra las aplicaciones de Adobe. Si hay una instalación o sincronización en curso, espera a que termine.
+3. Abre el ejecutable. Al terminar, verás cuántos procesos se han cerrado y si ha habido algún error.
 
-El lector PDF y `Adobe Installer` quedan fuera de la lista. La herramienta cierra una lista concreta de procesos; no desactiva servicios ni impide que vuelvan a arrancar. Algunos procesos requieren permisos de administrador. No es necesario ejecutarlo como administrador si no aparecen errores de acceso.
+El programa usa una lista de procesos. Desde la versión 1.1.0, el lector PDF y `Adobe Installer` quedan fuera de ella. Los servicios no se desactivan, por lo que algunos procesos pueden volver a iniciarse. Si aparece un error de acceso denegado, puede ser necesario ejecutar el programa como administrador.
 
-Opciones: `--list` muestra los procesos detectados sin cerrarlos; `--no-pause` evita la espera final. Códigos de salida: `0` correcto, `1` cierres sin confirmar, `2` argumentos incorrectos.
+También puedes usar estas opciones:
 
-El archivo `.bat` es un acceso alternativo y necesita el ejecutable en su misma carpeta.
+- `--list`: muestra los procesos encontrados sin cerrarlos.
+- `--no-pause`: cierra la ventana al terminar, sin esperar una tecla.
+
+El archivo `.bat` abre el mismo programa y necesita tener el ejecutable en su carpeta. Para usarlo en scripts, los códigos de salida son `0` si termina sin errores, `1` si algún cierre no se ha podido confirmar y `2` si los argumentos son incorrectos.
 
 ### Compilar y probar
 
-Windows con .NET Framework 4.x (incluido en Windows 10/11). No necesita PowerShell para ejecutar el programa, SDK adicional ni paquetes externos.
-
-Desde PowerShell, en la carpeta del proyecto:
+Se necesita Windows con .NET Framework 4.x, incluido en Windows 10 y 11. Puedes compilar el código y ejecutar las pruebas desde PowerShell, en la carpeta del proyecto:
 
 ```powershell
 .\build.ps1
 .\test.ps1
 ```
 
-Las pruebas crean y cierran únicamente procesos de prueba. No cierran procesos de Adobe.
+No hace falta instalar un SDK ni paquetes adicionales. Las pruebas abren y cierran sus propios procesos, sin cerrar los de Adobe. Desde la versión 1.1.0, el programa tampoco necesita abrir PowerShell para hacer la limpieza.
 
 ### SmartScreen
 
-El ejecutable no está firmado y Windows puede mostrar «Editor desconocido». Descárgalo del repositorio oficial y compara su SHA-256 con el publicado en la release. Ser de código abierto no garantiza por sí solo la seguridad del ejecutable.
+El ejecutable no tiene firma digital, así que Windows puede mostrar el aviso «Editor desconocido». Descárgalo desde este repositorio. En la release está su SHA-256 para comprobar que el archivo coincide con el publicado.
 
 ## English
 
-Portable utility to close Adobe helper processes on Windows.
+Adobe Process Cleaner closes Adobe processes that keep running in the background after you close its applications. It is portable: open the executable to run it.
+
+### Usage
 
 1. Download `AdobeProcessCleaner.exe` from [Releases](https://github.com/Cuby3212/AdobeProcessCleaner/releases/latest).
-2. Save your work, close Adobe applications, and let installations and synchronization finish.
-3. Run the program to see confirmed exits and errors.
+2. Save your work and close Adobe applications. Wait for any installation or synchronization to finish.
+3. Open the executable. When it finishes, it shows how many processes were closed and any errors.
 
-The PDF reader and `Adobe Installer` are excluded. A fixed process list is used; services are not disabled and processes may restart. Administrator permissions may be needed for some processes.
+The program uses a process list. As of version 1.1.0, the PDF reader and `Adobe Installer` are excluded. Services are not disabled, so some processes may restart. If an access denied error appears, you may need to run the program as administrator.
 
-Use `--list` to preview without closing anything, or `--no-pause` to skip the final keypress. Exit codes: `0` success, `1` unconfirmed exits, `2` invalid arguments. The optional `.bat` launcher requires the executable in the same folder.
+The following options are also available:
 
-Requires Windows with .NET Framework 4.x (included in Windows 10/11). Run `build.ps1` to compile and `test.ps1` to test. No additional SDK or packages are needed. Tests only close test processes.
+- `--list`: shows detected processes without closing them.
+- `--no-pause`: exits without waiting for a keypress.
 
-The executable is unsigned. Windows may show an unknown publisher warning. Download from this repository and compare the SHA-256 published with the release; open source alone does not guarantee binary safety.
+The `.bat` file opens the same program and needs the executable in its folder. For scripts, exit codes are `0` for completion without errors, `1` for unconfirmed exits, and `2` for invalid arguments.
+
+### Build and test
+
+Requires Windows with .NET Framework 4.x, included in Windows 10 and 11. Run these commands in PowerShell from the project folder:
+
+```powershell
+.\build.ps1
+.\test.ps1
+```
+
+No additional SDK or packages are needed. Tests start and close their own processes without closing Adobe processes. As of version 1.1.0, the program no longer opens PowerShell to perform the cleanup.
+
+### SmartScreen
+
+The executable is unsigned, so Windows may show an “Unknown Publisher” warning. Download it from this repository. Each release includes the executable's SHA-256 so you can check that your file matches the published one.
 
 ---
 
